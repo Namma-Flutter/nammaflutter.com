@@ -43,17 +43,32 @@ class Team extends StatelessComponent {
         if (m.bio != null) p(classes: 'member-bio', [.text(m.bio!)]),
         div(classes: 'member-links', [
           if (m.github != null)
-            a(href: m.github!, classes: 'member-link', attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'GitHub'}, [
-              img(src: 'images/github.svg', width: 20, height: 20, attributes: {'alt': 'GitHub'}),
-            ]),
+            a(
+              href: m.github!,
+              classes: 'member-link',
+              attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'GitHub'},
+              [
+                img(src: 'images/github.svg', width: 20, height: 20, attributes: {'alt': 'GitHub'}),
+              ],
+            ),
           if (m.twitter != null)
-            a(href: m.twitter!, classes: 'member-link', attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'Twitter'}, [
-              img(src: 'images/twitter.svg', width: 20, height: 20, attributes: {'alt': 'Twitter'}),
-            ]),
+            a(
+              href: m.twitter!,
+              classes: 'member-link',
+              attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'Twitter'},
+              [
+                img(src: 'images/twitter.svg', width: 20, height: 20, attributes: {'alt': 'Twitter'}),
+              ],
+            ),
           if (m.linkedin != null)
-            a(href: m.linkedin!, classes: 'member-link', attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'LinkedIn'}, [
-              img(src: 'images/linkedin.svg', width: 20, height: 20, attributes: {'alt': 'LinkedIn'}),
-            ]),
+            a(
+              href: m.linkedin!,
+              classes: 'member-link',
+              attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'LinkedIn'},
+              [
+                img(src: 'images/linkedin.svg', width: 20, height: 20, attributes: {'alt': 'LinkedIn'}),
+              ],
+            ),
         ]),
       ]),
     ]);
@@ -102,8 +117,18 @@ class Team extends StatelessComponent {
     css('.member-info').styles(display: .flex, flexDirection: .column, gap: .all(4.px)),
     css('.member-name').styles(fontSize: 1.rem, fontWeight: .w700, color: textColor),
     css('.member-role').styles(fontSize: 0.85.rem, color: mutedTextColor, fontWeight: .w500),
-    css('.member-bio').styles(fontSize: 0.9.rem, color: mutedTextColor, lineHeight: 1.6.em, margin: .only(top: 4.px)),
-    css('.member-links').styles(display: .flex, gap: .all(12.px), flexWrap: .wrap, margin: .only(top: 4.px)),
+    css('.member-bio').styles(
+      fontSize: 0.9.rem,
+      color: mutedTextColor,
+      lineHeight: 1.6.em,
+      margin: .only(top: 4.px),
+    ),
+    css('.member-links').styles(
+      display: .flex,
+      gap: .all(12.px),
+      flexWrap: .wrap,
+      margin: .only(top: 4.px),
+    ),
     css('.member-link').styles(
       display: .flex,
       alignItems: .center,

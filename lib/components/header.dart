@@ -136,7 +136,9 @@ class Header extends StatelessComponent {
         width: 100.percent,
         gap: .all(0.px),
         padding: .only(bottom: 12.px, top: 8.px),
-        border: .only(top: BorderSide.solid(color: borderColor, width: 1.px)),
+        border: .only(
+          top: BorderSide.solid(color: borderColor, width: 1.px),
+        ),
         raw: {'flex-basis': '100%'},
       ),
       css('.nav-toggle-input:checked ~ .header-nav').styles(display: .flex),

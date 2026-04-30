@@ -19,7 +19,8 @@ class TeamMember {
 const team = <TeamMember>[
   TeamMember(
     name: 'Justin Benito',
-    bio: 'Sparked Namma Flutter after connecting with Abhishek Doshi and the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
+    bio:
+        'Sparked Namma Flutter after connecting with Abhishek Doshi and the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
     github: 'https://github.com/justinbenito',
     twitter: 'https://x.com/JustinbenitoB',
     linkedin: 'https://linkedin.com/in/justinbenito',

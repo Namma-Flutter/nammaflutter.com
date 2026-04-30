@@ -20,6 +20,7 @@ import 'package:nammaflutter/pages/apps.dart' as _apps;
 import 'package:nammaflutter/pages/contact.dart' as _contact;
 import 'package:nammaflutter/pages/events.dart' as _events;
 import 'package:nammaflutter/pages/home.dart' as _home;
+import 'package:nammaflutter/pages/program_detail.dart' as _program_detail;
 import 'package:nammaflutter/pages/programs.dart' as _programs;
 import 'package:nammaflutter/pages/store.dart' as _store;
 import 'package:nammaflutter/pages/team.dart' as _team;
@@ -49,6 +50,10 @@ ServerOptions get defaultServerOptions => ServerOptions(
     _contact.Contact: ClientTarget<_contact.Contact>('contact'),
     _events.Events: ClientTarget<_events.Events>('events'),
     _home.Home: ClientTarget<_home.Home>('home'),
+    _program_detail.ProgramDetail: ClientTarget<_program_detail.ProgramDetail>(
+      'program_detail',
+      params: __program_detailProgramDetail,
+    ),
     _programs.Programs: ClientTarget<_programs.Programs>('programs'),
     _store.Store: ClientTarget<_store.Store>('store'),
     _team.Team: ClientTarget<_team.Team>('team'),
@@ -69,8 +74,13 @@ ServerOptions get defaultServerOptions => ServerOptions(
     ..._contact.Contact.styles,
     ..._events.Events.styles,
     ..._home.Home.styles,
+    ..._program_detail.ProgramDetail.styles,
     ..._programs.Programs.styles,
     ..._store.Store.styles,
     ..._team.Team.styles,
   ],
 );
+
+Map<String, Object?> __program_detailProgramDetail(
+  _program_detail.ProgramDetail c,
+) => {'slug': c.slug};

@@ -45,7 +45,9 @@ class Footer extends StatelessComponent {
             a(
               href: 'https://jaspr.dev',
               attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'Built with Jaspr'},
-              [img(src: 'images/builtwithjaspr.svg', width: 106, height: 40, attributes: {'alt': 'Built with Jaspr'})]
+              [
+                img(src: 'images/builtwithjaspr.svg', width: 106, height: 40, attributes: {'alt': 'Built with Jaspr'}),
+              ],
             ),
           ]),
         ]),

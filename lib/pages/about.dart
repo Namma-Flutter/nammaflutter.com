@@ -46,7 +46,11 @@ class About extends StatelessComponent {
         title: 'More than meetups.',
         muted: true,
         child: div(classes: 'about-pillars', [
-          _pillar('🤝', 'Networking', 'Opportunities to network with thousands of Flutter enthusiasts across Chennai and beyond.'),
+          _pillar(
+            '🤝',
+            'Networking',
+            'Opportunities to network with thousands of Flutter enthusiasts across Chennai and beyond.',
+          ),
           _pillar('🎤', 'Talks', 'Regular sessions led by experienced community members and industry speakers.'),
           _pillar('🛠️', 'Workshops & Meetups', 'Hands-on workshops and hackathons where you build real Flutter apps.'),
           _pillar('📖', 'Knowledge Resources', 'Access to curated tutorials, open-source code, and recorded sessions.'),

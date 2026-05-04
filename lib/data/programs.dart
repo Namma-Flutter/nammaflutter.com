@@ -1,11 +1,15 @@
 class Program {
+  final String slug;
   final String name;
+  final String type;
   final String frequency;
   final String description;
   final String icon;
 
   const Program({
+    required this.slug,
     required this.name,
+    required this.type,
     required this.frequency,
     required this.description,
     required this.icon,
@@ -14,52 +18,73 @@ class Program {
 
 const programs = <Program>[
   Program(
+    slug: 'fly-with-flutter',
     name: 'Fly with Flutter',
-    frequency: 'Regular',
+    type: 'Education',
+    frequency: 'Quarterly',
     description:
-        'College and school-focused events that bring Flutter to campuses across Tamil Nadu, sparking curiosity in the next generation of Flutter developers.',
-    icon: '✈️',
+        'Taking Flutter directly to colleges and schools. Hands-on sessions that spark the next generation of mobile developers before they even graduate.',
+    icon: '🚀',
   ),
   Program(
-    name: 'Flut-Hacks',
-    frequency: 'Annual',
+    slug: 'flut-hacks',
+    name: 'Flut Hacks',
+    type: 'Hackathon',
+    frequency: 'Quarterly',
     description:
-        'Our annual Flutter hackathon where teams race to build innovative apps under the clock. A fresh identity is coming soon — stay tuned!',
+        '48 hours. One theme. Build something real. Our hackathon challenges teams to ship a complete Flutter app from scratch, under pressure.',
     icon: '⚡',
   ),
   Program(
+    slug: 'namma-workshops',
     name: 'Namma Workshops',
-    frequency: 'Regular',
+    type: 'Workshop',
+    frequency: 'Bi-monthly',
     description:
-        'Hands-on sessions covering Flutter fundamentals to advanced topics — open to all skill levels and focused on real-world project building.',
-    icon: '🎓',
+        'Deep-dive technical sessions on specific Flutter topics: state management, animations, architecture, and more. Smaller groups, focused practice.',
+    icon: '🛠️',
   ),
   Program(
+    slug: 'namma-devs',
     name: 'Namma Devs',
-    frequency: 'Regular',
+    type: 'Podcast',
+    frequency: 'Bi-monthly',
     description:
-        'The Namma Flutter podcast — developer stories, deep dives into Flutter and Dart, and candid conversations with builders from the community.',
+        'The unofficial Flutter podcast from Chennai. Developer stories, framework deep-dives, and community conversations, recorded and shared openly.',
     icon: '🎙️',
   ),
   Program(
+    slug: 'devrooms',
     name: 'DevRooms',
-    frequency: 'Regular',
+    type: 'Community',
+    frequency: 'Monthly',
     description:
-        'A Flutter discussion arena where developers debate ideas, explore patterns, and dive deep into Flutter topics in an open forum format.',
+        'Casual, round-table Flutter discussions. No slides, no pressure. A space to talk through problems, explore ideas, and learn from each other.',
     icon: '💬',
   ),
   Program(
+    slug: 'namma-flutteristas',
     name: 'Namma Flutteristas',
-    frequency: 'Regular',
+    type: 'Inclusion',
+    frequency: 'Half-yearly',
     description:
-        'Dedicated events celebrating and empowering women in Flutter — a welcoming space to learn, network, and lead within the community.',
+        'Dedicated events celebrating women building with Flutter. A welcoming space for talks, networking, and amplifying underrepresented voices in the community.',
     icon: '💜',
   ),
   Program(
+    slug: 'namma-flutter-roadshow',
     name: 'Namma Flutter RoadShow',
-    frequency: 'Ad-hoc',
+    type: 'Roadshow',
+    frequency: 'Monthly',
     description:
-        'Taking Namma Flutter beyond Chennai — our road show travels to different cities and towns, growing the Flutter community everywhere.',
-    icon: '🌍',
+        'Namma Flutter on the move. Taking events beyond Chennai to bring the community to developers across Tamil Nadu and beyond.',
+    icon: '🗺️',
   ),
 ];
+
+Program? programBySlug(String slug) {
+  for (final p in programs) {
+    if (p.slug == slug) return p;
+  }
+  return null;
+}

@@ -14,6 +14,7 @@ Built with [Jaspr](https://jaspr.site) in static mode: routes are pre-rendered t
 | `/about` | Founding story, mission, stats |
 | `/apps` | Open-source Flutter apps built by the community |
 | `/programs` | Recurring programs — meetups, hackathons, workshops |
+| `/programs/<slug>` | Per-program detail page (Fly with Flutter, Flut Hacks, Namma Devs, etc.) |
 | `/events` | Past and upcoming events |
 | `/team` | Founders and core team |
 | `/store` | NammaStore (coming soon) |
@@ -108,11 +109,14 @@ lib/
 │   ├── button.dart           # Button.primary / .secondary / .ghost
 │   ├── hero.dart             # Landing hero section
 │   ├── cta_band.dart         # Full-width CTA strip
+│   ├── college_ticker.dart   # Auto-scrolling colleges marquee
 │   └── section_preview.dart  # Icon + title + link card (Home page)
 │
 ├── data/                     # Content as const Dart lists
 │   ├── apps.dart             # NammaApps
-│   ├── programs.dart         # Community programs
+│   ├── programs.dart         # Community programs (with slug + type)
+│   ├── podcast_episodes.dart # Namma Devs podcast episodes
+│   ├── colleges.dart         # Colleges featured in the ticker
 │   ├── events.dart           # Past + upcoming events
 │   ├── team.dart             # Founders + core team
 │   └── socials.dart          # Community URLs (GitHub, Telegram, etc.)
@@ -122,6 +126,7 @@ lib/
     ├── about.dart
     ├── apps.dart
     ├── programs.dart
+    ├── program_detail.dart   # Per-program detail view (/programs/<slug>)
     ├── store.dart
     ├── events.dart
     ├── team.dart
@@ -139,7 +144,9 @@ All content is stored as `const` Dart lists in `lib/data/`. No CMS, no API — j
 | Add/edit an app | `lib/data/apps.dart` |
 | Add/edit an event | `lib/data/events.dart` |
 | Add/edit a team member | `lib/data/team.dart` |
-| Add/edit a program | `lib/data/programs.dart` |
+| Add/edit a program | `lib/data/programs.dart` (set a unique `slug` — used in `/programs/<slug>` URL) |
+| Add/edit a podcast episode | `lib/data/podcast_episodes.dart` |
+| Add/edit a college on the ticker | `lib/data/colleges.dart` |
 | Update social/community links | `lib/data/socials.dart` |
 
 ---

@@ -12,6 +12,8 @@ class Hero extends StatelessComponent {
   final String primaryHref;
   final String secondaryLabel;
   final String secondaryHref;
+  final bool primaryExternal;
+  final bool secondaryExternal;
 
   const Hero({
     required this.kicker,
@@ -21,6 +23,8 @@ class Hero extends StatelessComponent {
     required this.primaryHref,
     required this.secondaryLabel,
     required this.secondaryHref,
+    this.primaryExternal = false,
+    this.secondaryExternal = false,
     super.key,
   });
 
@@ -33,8 +37,8 @@ class Hero extends StatelessComponent {
           h1(classes: 'hero-headline', [.text(headline)]),
           p(classes: 'hero-subtext', [.text(subtext)]),
           div(classes: 'hero-ctas', [
-            Button.primary(primaryLabel, primaryHref),
-            Button.secondary(secondaryLabel, secondaryHref),
+            Button.primary(primaryLabel, primaryHref, external: primaryExternal),
+            Button.secondary(secondaryLabel, secondaryHref, external: secondaryExternal),
           ]),
         ]),
         div(classes: 'hero-logo', [
@@ -53,41 +57,41 @@ class Hero extends StatelessComponent {
     css('.hero .container').styles(
       display: .flex,
       flexDirection: .row,
-      alignItems: .center,
       justifyContent: .spaceBetween,
+      alignItems: .center,
       gap: .all(48.px),
     ),
     css('.hero-content').styles(
       display: .flex,
+      maxWidth: 580.px,
       flexDirection: .column,
       gap: .all(16.px),
-      maxWidth: 580.px,
     ),
     css('.hero-kicker').styles(
-      color: accentColor,
-      fontWeight: .w600,
-      fontSize: 0.9.rem,
-      letterSpacing: 1.5.px,
       margin: .zero,
+      color: accentColor,
+      fontSize: 0.9.rem,
+      fontWeight: .w600,
+      letterSpacing: 1.5.px,
       raw: {'text-transform': 'uppercase'},
     ),
     css('.hero-headline').styles(
+      color: textColor,
       fontSize: 3.5.rem,
       fontWeight: .w700,
       lineHeight: 1.1.em,
-      color: textColor,
     ),
     css('.hero-subtext').styles(
-      fontSize: 1.15.rem,
-      color: mutedTextColor,
-      lineHeight: 1.7.em,
       maxWidth: 520.px,
+      color: mutedTextColor,
+      fontSize: 1.15.rem,
+      lineHeight: 1.7.em,
     ),
     css('.hero-ctas').styles(
       display: .flex,
       flexDirection: .row,
-      gap: .all(12.px),
       flexWrap: .wrap,
+      gap: .all(12.px),
     ),
     css('.hero-logo').styles(raw: {'flex-shrink': '0'}),
     css.media(MediaQuery.screen(maxWidth: 768.px), [

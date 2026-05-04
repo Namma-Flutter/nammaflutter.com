@@ -1,6 +1,7 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
+import '../components/college_ticker.dart';
 import '../components/cta_band.dart';
 import '../components/hero.dart';
 import '../components/section.dart';
@@ -20,9 +21,12 @@ class Home extends StatelessComponent {
             'Chennai\'s premier Flutter community, building the future of mobile development. Join us for Flutter learning, hands-on workshops, and community networking. Whether you\'re a beginner or an expert, there\'s something for everyone!',
         primaryLabel: 'Join our Telegram',
         primaryHref: 'https://t.me/nammaflutter',
+        primaryExternal: true,
         secondaryLabel: 'View Events',
-        secondaryHref: '/events',
+        secondaryHref: 'https://lu.ma/Nammaflutter',
+        secondaryExternal: true,
       ),
+      const CollegeTicker(),
       Section(
         eyebrow: 'Everything we do',
         title: 'Explore Namma Flutter',

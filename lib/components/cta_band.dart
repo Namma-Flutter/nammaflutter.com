@@ -24,8 +24,8 @@ class CtaBand extends StatelessComponent {
   @css
   static List<StyleRule> get styles => [
     css('.cta-band').styles(
-      backgroundColor: primaryColor,
       padding: .symmetric(vertical: 64.px),
+      backgroundColor: primaryColor,
     ),
     css('.cta-band .container').styles(
       display: .flex,
@@ -40,12 +40,12 @@ class CtaBand extends StatelessComponent {
       fontWeight: .w700,
     ),
     css('.cta-band .btn-secondary').styles(
-      color: Colors.white,
       border: .all(style: BorderStyle.solid, color: Colors.white, width: 2.px),
+      color: Colors.white,
     ),
     css('.cta-band .btn-secondary:hover').styles(
-      backgroundColor: Colors.white,
       color: primaryColor,
+      backgroundColor: Colors.white,
     ),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
       css('.cta-band').styles(padding: .symmetric(vertical: 40.px)),

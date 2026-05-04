@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI Agents when working with code in this repository.
 
 ## Project Overview
 
@@ -70,7 +70,7 @@ Routes are registered in `lib/app.dart` using `jaspr_router`. The `App` componen
 | `lib/components/hero.dart` | Landing hero — kicker, headline, subtext, two CTAs, logo |
 | `lib/components/cta_band.dart` | `CtaBand` — full-width primary-color strip with CTA button |
 | `lib/components/section_preview.dart` | `SectionPreview` — icon + title + desc + link, used on Home |
-| `lib/data/apps.dart` | `AppItem` list — Namma Wallet, Flappy Dash, UI Kit, UI Kit Manager |
+| `lib/data/apps.dart` | `AppItem` list — Namma Wallet, Flappy Dash, Dash Race, UI Kit |
 | `lib/data/programs.dart` | `Program` list — Fly with Flutter, Beginner Workshop, Hackathons, etc. |
 | `lib/data/events.dart` | `EventItem` list — past and upcoming events with dates/venues |
 | `lib/data/team.dart` | `TeamMember` lists — `founders` and `coreTeam` |

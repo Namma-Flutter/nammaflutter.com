@@ -6,7 +6,8 @@ class SocialLinks {
   static const medium = 'https://medium.com/nammaflutter';
   static const telegram = 'https://t.me/nammaflutter';
   static const meetup = 'https://www.meetup.com/nammaflutter/';
-  static const luma = 'https://lu.ma/calendar/manage/cal-WRIOX8p2L8zRrrK';
+  static const luma = 'https://lu.ma/Nammaflutter';
   static const whatsapp = 'https://chat.whatsapp.com/GjhFMKXrkdt2c3RGOOyYqy';
+  static const youtube = 'https://www.youtube.com/@nammaflutter';
   static const contactEmail = 'hello@nammaflutter.com';
 }

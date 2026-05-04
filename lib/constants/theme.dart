@@ -23,17 +23,17 @@ List<StyleRule> get globalStyles => [
     minHeight: 100.vh,
     padding: .zero,
     margin: .zero,
+    color: textColor,
     fontFamily: const .list([FontFamily('Inter'), FontFamilies.sansSerif]),
     fontSize: 16.px,
     lineHeight: 1.6.em,
-    color: textColor,
     backgroundColor: surfaceColor,
   ),
   css('h1, h2, h3, h4').styles(
     margin: .zero,
-    lineHeight: 1.2.em,
-    fontWeight: .w700,
     color: textColor,
+    fontWeight: .w700,
+    lineHeight: 1.2.em,
   ),
   css('p').styles(
     margin: .zero,
@@ -41,16 +41,24 @@ List<StyleRule> get globalStyles => [
     lineHeight: 1.7.em,
   ),
   css('a').styles(
-    textDecoration: TextDecoration(line: .none),
     color: .currentColor,
+    textDecoration: TextDecoration(line: .none),
   ),
   css('img').styles(
-    maxWidth: 100.percent,
     display: .block,
+    maxWidth: 100.percent,
   ),
   css('ul, ol').styles(
-    margin: .zero,
     padding: .zero,
+    margin: .zero,
     raw: {'list-style': 'none'},
   ),
+  css('.container').styles(
+    maxWidth: 1120.px,
+    padding: .symmetric(horizontal: 24.px),
+    margin: .symmetric(horizontal: .auto),
+  ),
+  css.media(MediaQuery.screen(maxWidth: 768.px), [
+    css('.container').styles(padding: .symmetric(horizontal: 16.px)),
+  ]),
 ];

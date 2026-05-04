@@ -4,7 +4,6 @@ import 'package:jaspr/jaspr.dart';
 import '../components/cta_band.dart';
 import '../components/section.dart';
 import '../constants/theme.dart';
-import '../data/sponsors.dart';
 
 @client
 class About extends StatelessComponent {
@@ -21,7 +20,7 @@ class About extends StatelessComponent {
         child: div(classes: 'about-story', [
           p([
             .text(
-              'In 2024, Justin Benito and Harish — inspired by the Flutter India community and mentors like Abhishek Doshi — organised the first Namma Flutter meetup in Chennai. '
+              'In 2024, Justin Benito and Harish — inspired by the Flutter India community — organised the first Namma Flutter meetup in Chennai. '
               'What started as a small gathering quickly grew into a movement.',
             ),
           ]),
@@ -58,17 +57,6 @@ class About extends StatelessComponent {
         ]),
       ),
       Section(
-        eyebrow: 'Our sponsors',
-        title: 'Backed by great companies.',
-        subtitle: 'These organisations make our events and programs possible.',
-        child: div(classes: 'sponsors-grid', [
-          for (final s in sponsors)
-            div(classes: 'sponsor-card', [
-              p(classes: 'sponsor-name', [.text(s.name)]),
-            ]),
-        ]),
-      ),
-      Section(
         eyebrow: 'Where we are now',
         title: 'Growing beyond Chennai.',
         subtitle:
@@ -99,32 +87,32 @@ class About extends StatelessComponent {
   static List<StyleRule> get styles => [
     css('.about-story').styles(
       display: .flex,
+      maxWidth: 720.px,
       flexDirection: .column,
       gap: .all(16.px),
-      maxWidth: 720.px,
     ),
-    css('.about-story p').styles(fontSize: 1.05.rem, color: mutedTextColor, lineHeight: 1.75.em),
+    css('.about-story p').styles(color: mutedTextColor, fontSize: 1.05.rem, lineHeight: 1.75.em),
     css('.stats-band').styles(
-      backgroundColor: primaryColor,
       padding: .symmetric(vertical: 48.px),
+      backgroundColor: primaryColor,
     ),
     css('.stats-grid').styles(
       display: .grid,
       gap: .all(24.px),
-      raw: {'grid-template-columns': 'repeat(auto-fit, minmax(160px, 1fr))'},
       textAlign: .center,
+      raw: {'grid-template-columns': 'repeat(auto-fit, minmax(160px, 1fr))'},
     ),
     css('.stat-item').styles(display: .flex, flexDirection: .column, gap: .all(4.px)),
     css('.stat-value').styles(
+      margin: .zero,
+      color: Colors.white,
       fontSize: 2.5.rem,
       fontWeight: .w700,
-      color: Colors.white,
-      margin: .zero,
     ),
     css('.stat-label').styles(
-      fontSize: 0.9.rem,
-      color: .rgba(255, 255, 255, 0.75),
       margin: .zero,
+      color: .rgba(255, 255, 255, 0.75),
+      fontSize: 0.9.rem,
     ),
     css('.about-pillars').styles(
       display: .grid,
@@ -133,43 +121,19 @@ class About extends StatelessComponent {
     ),
     css('.about-pillar').styles(
       display: .flex,
+      padding: .all(24.px),
+      radius: .all(.circular(12.px)),
       flexDirection: .column,
       gap: .all(10.px),
-      padding: .all(24.px),
       backgroundColor: surfaceColor,
-      radius: .all(.circular(12.px)),
     ),
     css('.pillar-icon').styles(fontSize: 1.8.rem),
-    css('.pillar-title').styles(fontSize: 1.rem, fontWeight: .w700, color: textColor),
-    css('.pillar-body').styles(fontSize: 0.9.rem, color: mutedTextColor, lineHeight: 1.6.em),
-    css('.sponsors-grid').styles(
-      display: .grid,
-      gap: .all(16.px),
-      raw: {'grid-template-columns': 'repeat(auto-fit, minmax(180px, 1fr))'},
-    ),
-    css('.sponsor-card').styles(
-      display: .flex,
-      alignItems: .center,
-      justifyContent: .center,
-      padding: .symmetric(vertical: 24.px, horizontal: 20.px),
-      backgroundColor: surfaceMuted,
-      border: .all(style: BorderStyle.solid, color: borderColor, width: 1.px),
-      radius: .all(.circular(10.px)),
-      minHeight: 80.px,
-    ),
-    css('.sponsor-name').styles(
-      fontSize: 1.rem,
-      fontWeight: .w600,
-      color: mutedTextColor,
-      textAlign: .center,
-      margin: .zero,
-    ),
+    css('.pillar-title').styles(color: textColor, fontSize: 1.rem, fontWeight: .w700),
+    css('.pillar-body').styles(color: mutedTextColor, fontSize: 0.9.rem, lineHeight: 1.6.em),
     css.media(MediaQuery.screen(maxWidth: 640.px), [
       css('.stats-band').styles(padding: .symmetric(vertical: 32.px)),
-      css('.stats-grid').styles(raw: {'grid-template-columns': 'repeat(3, 1fr)'}),
       css('.stat-value').styles(fontSize: 1.75.rem),
       css('.about-pillars').styles(raw: {'grid-template-columns': '1fr'}),
-      css('.sponsors-grid').styles(raw: {'grid-template-columns': '1fr'}),
     ]),
   ];
 }

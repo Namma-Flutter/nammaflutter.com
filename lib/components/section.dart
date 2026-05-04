@@ -41,46 +41,41 @@ class Section extends StatelessComponent {
   @css
   static List<StyleRule> get styles => [
     css('.section').styles(
-      padding: .symmetric(vertical: 80.px),
-      width: 100.percent,
-      flex: Flex(grow: 1),
       display: .flex,
+      width: 100.percent,
+      padding: .symmetric(vertical: 80.px),
       flexDirection: .column,
+      flex: Flex(grow: 1),
     ),
     css('.section-muted').styles(backgroundColor: surfaceMuted),
-    css('.container').styles(
-      maxWidth: 1120.px,
-      margin: .symmetric(horizontal: .auto),
-      padding: .symmetric(horizontal: 24.px),
-    ),
     css('.section-eyebrow').styles(
-      color: accentColor,
-      fontWeight: .w600,
-      fontSize: 0.85.rem,
-      letterSpacing: 1.5.px,
       margin: .only(bottom: 8.px),
+      color: accentColor,
+      fontSize: 0.85.rem,
+      fontWeight: .w600,
+      letterSpacing: 1.5.px,
       raw: {'text-transform': 'uppercase'},
     ),
     css('.section-title').styles(
+      margin: .only(bottom: 12.px),
+      color: textColor,
       fontSize: 2.rem,
       fontWeight: .w700,
-      color: textColor,
-      margin: .only(bottom: 12.px),
     ),
     css('.section-subtitle').styles(
-      fontSize: 1.1.rem,
-      color: mutedTextColor,
       maxWidth: 600.px,
       margin: .only(bottom: 40.px),
+      color: mutedTextColor,
+      fontSize: 1.1.rem,
     ),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
       css('.section').styles(padding: .symmetric(vertical: 48.px)),
-      css('.container').styles(padding: .symmetric(horizontal: 16.px)),
       css('.section-title').styles(fontSize: 1.6.rem),
-      css('.section-subtitle').styles(
-        fontSize: 1.rem,
-        margin: .only(bottom: 28.px),
-      ),
+      css('.section-subtitle').styles(margin: .only(bottom: 28.px), fontSize: 1.rem),
+    ]),
+    css.media(MediaQuery.screen(maxWidth: 480.px), [
+      css('.section').styles(padding: .symmetric(vertical: 40.px)),
+      css('.section-title').styles(fontSize: 1.35.rem),
     ]),
   ];
 }

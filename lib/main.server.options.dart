@@ -7,6 +7,7 @@
 import 'package:jaspr/server.dart';
 import 'package:nammaflutter/components/button.dart' as _button;
 import 'package:nammaflutter/components/card.dart' as _card;
+import 'package:nammaflutter/components/college_ticker.dart' as _college_ticker;
 import 'package:nammaflutter/components/cta_band.dart' as _cta_band;
 import 'package:nammaflutter/components/footer.dart' as _footer;
 import 'package:nammaflutter/components/header.dart' as _header;
@@ -63,6 +64,7 @@ ServerOptions get defaultServerOptions => ServerOptions(
     ..._app.App.styles,
     ..._button.Button.styles,
     ..._card.NammaCard.styles,
+    ..._college_ticker.CollegeTicker.styles,
     ..._cta_band.CtaBand.styles,
     ..._footer.Footer.styles,
     ..._header.Header.styles,

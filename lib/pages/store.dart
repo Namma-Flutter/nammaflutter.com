@@ -30,22 +30,22 @@ class Store extends StatelessComponent {
   @css
   static List<StyleRule> get styles => [
     css('.store-page').styles(
-      minHeight: .expression('calc(100vh - 64px)'),
       display: .flex,
-      alignItems: .center,
-      justifyContent: .center,
+      minHeight: .expression('calc(100vh - 64px)'),
       padding: .symmetric(vertical: 80.px),
+      justifyContent: .center,
+      alignItems: .center,
     ),
     css('.store-content').styles(
       display: .flex,
+      maxWidth: 520.px,
       flexDirection: .column,
       alignItems: .center,
-      textAlign: .center,
       gap: .all(20.px),
-      maxWidth: 520.px,
+      textAlign: .center,
     ),
     css('.store-emoji').styles(fontSize: 3.5.rem, lineHeight: 1.em),
-    css('.store-title').styles(fontSize: 2.5.rem, fontWeight: .w700, color: textColor),
-    css('.store-subtitle').styles(fontSize: 1.05.rem, color: mutedTextColor, lineHeight: 1.7.em),
+    css('.store-title').styles(color: textColor, fontSize: 2.5.rem, fontWeight: .w700),
+    css('.store-subtitle').styles(color: mutedTextColor, fontSize: 1.05.rem, lineHeight: 1.7.em),
   ];
 }

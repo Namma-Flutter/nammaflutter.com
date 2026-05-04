@@ -23,13 +23,13 @@ const apps = <AppItem>[
     description:
         'A fully functional digital wallet app built with Flutter, showcasing real-world payment UX patterns and state management.',
     repoUrl: 'https://github.com/Namma-Flutter/namma_wallet',
-    tags: ['Flutter', 'Finance', 'State Management'],
+    tags: ['Flutter', 'State Management'],
   ),
   AppItem(
     name: 'Flappy Dash',
     tagline: 'Flutter game in a weekend',
     description:
-        'A Flappy Bird–inspired game built at a Namma Flutter hackathon. Pure Flutter, no game engine — just canvas and physics.',
+        'A Flappy Bird inspired game built at a Namma Flutter hackathon. Pure Flutter, no game engine — just canvas and physics.',
     repoUrl: 'https://github.com/Namma-Flutter/flappy_dash',
     tags: ['Flutter', 'Game', 'Canvas'],
   ),
@@ -42,11 +42,11 @@ const apps = <AppItem>[
     tags: ['Flutter', 'UI Kit', 'Design System'],
   ),
   AppItem(
-    name: 'UI Kit Manager',
-    tagline: 'CLI for the Namma UI Kit',
-    description: 'A Dart CLI tool to scaffold, manage, and publish components for the Namma UI Kit ecosystem.',
-    repoUrl: 'https://github.com/Namma-Flutter/ui_kit_manager',
-    tags: ['Dart', 'CLI', 'Tooling'],
+    name: 'Dash Race',
+    tagline: 'Fast-paced Flutter racing game',
+    description:
+        'A high-speed racing game featuring Dash, showcasing real-time gameplay and game loop mechanics built entirely with Flutter.',
+    repoUrl: 'https://github.com/Namma-Flutter/dash_race',
+    tags: ['Flutter', 'Game', 'Animation'],
   ),
-  // TODO: add more community apps here
 ];

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" fill="none">
+  <defs>
+    <pattern id="kolam" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="2" fill="#01589B" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="320" fill="url(#kolam)"/>
+</svg>

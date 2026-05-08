@@ -17,7 +17,7 @@ class Events extends StatelessComponent {
     return Section(
       eyebrow: 'Events',
       title: 'From meetups to conferences.',
-      subtitle: 'A growing calendar of Namma Flutter events — in Chennai and beyond.',
+      subtitle: 'A growing calendar of Namma Flutter events, in Chennai and beyond.',
       child: .fragment([
         if (upcoming.isNotEmpty) ...[
           h3(classes: 'events-group-heading', [.text('Upcoming')]),

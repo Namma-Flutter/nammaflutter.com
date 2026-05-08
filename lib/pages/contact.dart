@@ -15,7 +15,7 @@ class Contact extends StatelessComponent {
     return Section(
       eyebrow: 'Get in touch',
       title: 'We\'d love to hear from you.',
-      subtitle: 'Questions, speaker pitches, sponsorship enquiries — all welcome.',
+      subtitle: 'Questions, speaker pitches, sponsorship enquiries: all welcome.',
       child: div(classes: 'contact-grid', [
         div(classes: 'contact-info', [
           _row('images/gmail.svg', 'Email', SocialLinks.contactEmail, 'mailto:${SocialLinks.contactEmail}'),

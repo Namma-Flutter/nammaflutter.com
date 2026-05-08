@@ -5,16 +5,23 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/server.dart';
+import 'package:nammaflutter/components/apps_showcase.dart' as _apps_showcase;
 import 'package:nammaflutter/components/button.dart' as _button;
 import 'package:nammaflutter/components/card.dart' as _card;
 import 'package:nammaflutter/components/college_ticker.dart' as _college_ticker;
 import 'package:nammaflutter/components/cta_band.dart' as _cta_band;
+import 'package:nammaflutter/components/event_spotlight.dart'
+    as _event_spotlight;
 import 'package:nammaflutter/components/footer.dart' as _footer;
 import 'package:nammaflutter/components/header.dart' as _header;
 import 'package:nammaflutter/components/hero.dart' as _hero;
+import 'package:nammaflutter/components/namma_word.dart' as _namma_word;
+import 'package:nammaflutter/components/podcast_strip.dart' as _podcast_strip;
+import 'package:nammaflutter/components/program_showcase.dart'
+    as _program_showcase;
 import 'package:nammaflutter/components/section.dart' as _section;
-import 'package:nammaflutter/components/section_preview.dart'
-    as _section_preview;
+import 'package:nammaflutter/components/sponsors_grid.dart' as _sponsors_grid;
+import 'package:nammaflutter/components/stats_strip.dart' as _stats_strip;
 import 'package:nammaflutter/constants/theme.dart' as _theme;
 import 'package:nammaflutter/pages/about.dart' as _about;
 import 'package:nammaflutter/pages/apps.dart' as _apps;
@@ -62,20 +69,25 @@ ServerOptions get defaultServerOptions => ServerOptions(
   styles: () => [
     ..._theme.globalStyles,
     ..._app.App.styles,
+    ..._apps_showcase.AppsShowcase.styles,
     ..._button.Button.styles,
     ..._card.NammaCard.styles,
     ..._college_ticker.CollegeTicker.styles,
     ..._cta_band.CtaBand.styles,
+    ..._event_spotlight.EventSpotlight.styles,
     ..._footer.Footer.styles,
     ..._header.Header.styles,
     ..._hero.Hero.styles,
+    ..._namma_word.NammaWord.styles,
+    ..._podcast_strip.PodcastStrip.styles,
+    ..._program_showcase.ProgramShowcase.styles,
     ..._section.Section.styles,
-    ..._section_preview.SectionPreview.styles,
+    ..._sponsors_grid.SponsorsGrid.styles,
+    ..._stats_strip.StatsStrip.styles,
     ..._about.About.styles,
     ..._apps.Apps.styles,
     ..._contact.Contact.styles,
     ..._events.Events.styles,
-    ..._home.Home.styles,
     ..._program_detail.ProgramDetail.styles,
     ..._programs.Programs.styles,
     ..._store.Store.styles,

@@ -39,6 +39,7 @@ const team = <TeamMember>[
   ),
   TeamMember(
     name: 'Shiva Prasath R',
+    bio: 'An all rounder at Namma Flutter, handling public relations and sponsorships while also staying involved in development and community activities.',
     linkedin: 'https://www.linkedin.com/in/shivaprasathr396',
     photo: 'images/shiva.png',
   ),

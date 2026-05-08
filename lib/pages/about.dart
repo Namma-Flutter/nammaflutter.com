@@ -20,13 +20,13 @@ class About extends StatelessComponent {
         child: div(classes: 'about-story', [
           p([
             .text(
-              'In 2024, Justin Benito and Harish — inspired by the Flutter India community — organised the first Namma Flutter meetup in Chennai. '
+              'In 2024, Justin Benito and Harish, inspired by the Flutter India community, organised the first Namma Flutter meetup in Chennai. '
               'What started as a small gathering quickly grew into a movement.',
             ),
           ]),
           p([
             .text(
-              '"Namma" means "ours" in Tamil. That\'s the spirit behind everything we do — this community belongs to everyone in it. '
+              '"Namma" means "ours" in Tamil. That\'s the spirit behind everything we do. This community belongs to everyone in it. '
               'Join us for Flutter learning, hands-on workshops, and community networking.',
             ),
           ]),
@@ -64,8 +64,8 @@ class About extends StatelessComponent {
         muted: true,
         child: .empty(),
       ),
-      const CtaBand(
-        headline: 'Want to get involved? Come say hi.',
+      CtaBand(
+        headline: [.text('Want to get involved? Come say hi.')],
         buttonLabel: 'Contact us',
         buttonHref: '/contact',
       ),

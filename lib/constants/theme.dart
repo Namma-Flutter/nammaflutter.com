@@ -3,15 +3,22 @@ import 'package:jaspr/dom.dart';
 const primaryColor = Color('#01589B');
 const primaryColorDark = Color('#013E6E');
 const accentColor = Color('#13B9FD');
+const accentWarm = Color('#FF6B35');
 const surfaceColor = Colors.white;
 const surfaceMuted = Color('#F4F7FA');
+const darkSurface = Color('#0A1628');
 const textColor = Color('#0E1A24');
 const mutedTextColor = Color('#5A6B7A');
 const borderColor = Color('#E2E8F0');
 
+const displayFontFamily = FontFamily('Space Grotesk');
+const tamilFontFamily = FontFamily('Anek Tamil');
+
 @css
 List<StyleRule> get globalStyles => [
-  css.import('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'),
+  css.import(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Anek+Tamil:wght@500;600;700&display=swap',
+  ),
   css('*, *::before, *::after').styles(
     boxSizing: .borderBox,
   ),

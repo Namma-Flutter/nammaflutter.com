@@ -5,18 +5,25 @@ import '../constants/theme.dart';
 import 'button.dart';
 
 class CtaBand extends StatelessComponent {
-  final String headline;
+  final List<Component> headline;
   final String buttonLabel;
   final String buttonHref;
+  final bool buttonExternal;
 
-  const CtaBand({required this.headline, required this.buttonLabel, required this.buttonHref, super.key});
+  const CtaBand({
+    required this.headline,
+    required this.buttonLabel,
+    required this.buttonHref,
+    this.buttonExternal = false,
+    super.key,
+  });
 
   @override
   Component build(BuildContext context) {
     return div(classes: 'cta-band', [
       div(classes: 'container', [
-        h2(classes: 'cta-band-headline', [.text(headline)]),
-        Button.secondary(buttonLabel, buttonHref),
+        h2(classes: 'cta-band-headline', headline),
+        Button.secondary(buttonLabel, buttonHref, external: buttonExternal),
       ]),
     ]);
   }

@@ -1,6 +1,7 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import '../constants/theme.dart';
+import 'namma_word.dart';
 
 class Header extends StatelessComponent {
   const Header({super.key});
@@ -21,7 +22,10 @@ class Header extends StatelessComponent {
 
     return header([
       div(classes: 'header-inner container', [
-        a(href: '/', classes: 'header-logo', [.text('Namma Flutter')]),
+        a(href: '/', classes: 'header-logo', [
+          const NammaWord(),
+          .text(' Flutter'),
+        ]),
         input(type: InputType.checkbox, id: 'nav-toggle', classes: 'nav-toggle-input'),
         label(
           htmlFor: 'nav-toggle',

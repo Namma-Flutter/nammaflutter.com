@@ -17,11 +17,11 @@ class Store extends StatelessComponent {
           h1(classes: 'store-title', [.text('NammaStore')]),
           p(classes: 'store-subtitle', [
             .text(
-              'Official Namma Flutter merch is on its way — t-shirts, stickers, hoodies, and more. '
+              'Official Namma Flutter merch is on its way: t-shirts, stickers, hoodies, and more. '
               'Be the first to know when we launch.',
             ),
           ]),
-          Button.primary('Get notified — contact us', '/contact'),
+          Button.primary('Get notified, contact us', '/contact'),
         ]),
       ]),
     ]);

@@ -29,17 +29,9 @@ const apps = <AppItem>[
     name: 'Flappy Dash',
     tagline: 'Flutter game in a weekend',
     description:
-        'A Flappy Bird inspired game built at a Namma Flutter hackathon. Pure Flutter, no game engine — just canvas and physics.',
+        'A Flappy Bird inspired game built at a Namma Flutter hackathon. Pure Flutter, no game engine, just canvas and physics.',
     repoUrl: 'https://github.com/Namma-Flutter/flappy_dash',
     tags: ['Flutter', 'Game', 'Canvas'],
-  ),
-  AppItem(
-    name: 'Namma UI Kit',
-    tagline: 'Community design system',
-    description:
-        'A growing library of production-ready Flutter widgets and design tokens used across Namma Flutter projects.',
-    repoUrl: 'https://github.com/Namma-Flutter/namma_ui_kit',
-    tags: ['Flutter', 'UI Kit', 'Design System'],
   ),
   AppItem(
     name: 'Dash Race',

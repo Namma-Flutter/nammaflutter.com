@@ -23,8 +23,8 @@ class ProgramDetail extends StatelessComponent {
     return .fragment([
       _DetailHeader(program: program),
       _detailBody(program),
-      const CtaBand(
-        headline: 'Want to speak, sponsor, or volunteer?',
+      CtaBand(
+        headline: [.text('Want to speak, sponsor, or volunteer?')],
         buttonLabel: 'Get in touch',
         buttonHref: '/contact',
       ),
@@ -275,7 +275,7 @@ class _EpisodeCard extends StatelessComponent {
         referrerPolicy: .strictOriginWhenCrossOrigin,
         classes: 'episode-frame',
         allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-        attributes: {'allowfullscreen': '', 'title': 'Namma Devs Episode $num — ${episode.title}'},
+        attributes: {'allowfullscreen': '', 'title': 'Namma Devs Episode $num: ${episode.title}'},
         [],
       ),
       div(classes: 'episode-meta', [
@@ -328,8 +328,8 @@ class _NotFound extends StatelessComponent {
           [const Button.primary('Back to programs', '/programs')],
         ),
       ),
-      const CtaBand(
-        headline: 'Want to speak, sponsor, or volunteer?',
+      CtaBand(
+        headline: [.text('Want to speak, sponsor, or volunteer?')],
         buttonLabel: 'Get in touch',
         buttonHref: '/contact',
       ),

@@ -3,6 +3,7 @@ import 'package:jaspr/jaspr.dart';
 
 import '../constants/theme.dart';
 import '../data/socials.dart';
+import 'namma_word.dart';
 
 class Footer extends StatelessComponent {
   const Footer({super.key});
@@ -13,9 +14,12 @@ class Footer extends StatelessComponent {
       div(classes: 'container', [
         div(classes: 'footer-top', [
           div(classes: 'footer-brand', [
-            p(classes: 'footer-logo', [.text('Namma Flutter')]),
+            p(classes: 'footer-logo', [
+              const NammaWord(),
+              .text(' Flutter'),
+            ]),
             p(classes: 'footer-tagline', [
-              .text('Chennai\'s Flutter developer community — built by the community, for the community.'),
+              .text('Chennai\'s Flutter developer community, built by the community for the community.'),
             ]),
           ]),
           div(classes: 'footer-links', [

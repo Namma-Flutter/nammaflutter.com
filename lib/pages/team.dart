@@ -21,8 +21,8 @@ class Team extends StatelessComponent {
           for (final m in team) _memberCard(m),
         ]),
       ),
-      const CtaBand(
-        headline: 'Want to contribute? We\'d love to have you.',
+      CtaBand(
+        headline: [.text('Want to contribute? We\'d love to have you.')],
         buttonLabel: 'Join the community',
         buttonHref: '/contact',
       ),

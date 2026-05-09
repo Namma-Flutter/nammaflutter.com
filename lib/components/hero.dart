@@ -47,6 +47,7 @@ class Hero extends StatelessComponent {
           ]),
         ]),
         div(classes: 'hero-logo', [
+          img(src: 'images/hello-bubble.svg', classes: 'hero-greeting', attributes: {'alt': 'Hello!'}),
           img(src: 'images/logo.png', width: 380, attributes: {'alt': 'Namma Flutter mascot'}),
         ]),
       ]),
@@ -129,6 +130,7 @@ class Hero extends StatelessComponent {
       gap: .all(12.px),
     ),
     css('.hero-logo').styles(
+      cursor: .pointer,
       raw: {
         'flex-shrink': '0',
         'position': 'relative',
@@ -139,8 +141,45 @@ class Hero extends StatelessComponent {
     css('.hero-logo img').styles(
       raw: {'filter': 'drop-shadow(0 24px 32px rgba(1, 88, 155, 0.18))'},
     ),
+    css('@keyframes hero-bubble-pop', [
+      css('0%').styles(raw: {'transform': 'translate(0, 0) scale(0.6) rotate(-8deg)', 'opacity': '0'}),
+      css('60%').styles(raw: {'transform': 'translate(0, -8px) scale(1.08) rotate(2deg)', 'opacity': '1'}),
+      css('100%').styles(raw: {'transform': 'translate(0, -4px) scale(1) rotate(0deg)', 'opacity': '1'}),
+    ]),
+    css('.hero-greeting').styles(
+      width: 180.px,
+      transition: Transition('opacity', duration: 200.ms, curve: .easeOut),
+      raw: {
+        'height': 'auto',
+        'position': 'absolute',
+        'top': '-50px',
+        'left': '-30px',
+        'opacity': '0',
+        'pointer-events': 'none',
+        'transform-origin': 'bottom right',
+        'image-rendering': 'pixelated',
+        'z-index': '2',
+        'filter': 'drop-shadow(0 6px 12px rgba(10, 22, 40, 0.18))',
+      },
+    ),
+    css('.hero-logo:hover .hero-greeting').styles(
+      raw: {
+        'opacity': '1',
+        'animation': 'hero-bubble-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+      },
+    ),
+    css.media(MediaQuery.screen(maxWidth: 1100.px), [
+      css('.hero-greeting').styles(
+        width: 160.px,
+        raw: {'top': '-45px', 'left': '-25px'},
+      ),
+    ]),
     css.media(MediaQuery.screen(maxWidth: 900.px), [
       css('.hero-logo img').styles(width: 280.px),
+      css('.hero-greeting').styles(
+        width: 130.px,
+        raw: {'top': '-35px', 'left': '-20px'},
+      ),
     ]),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
       css('.hero').styles(

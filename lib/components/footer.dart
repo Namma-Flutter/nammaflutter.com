@@ -31,7 +31,7 @@ class Footer extends StatelessComponent {
             ]),
             _col('Projects', [
               _link('Apps', '/apps'),
-              _link('Store', '/store'),
+              _extLink('Store', 'https://store.nammaflutter.com'),
               _extLink('GitHub', SocialLinks.github),
             ]),
             _col('Connect', [

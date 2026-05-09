@@ -7,13 +7,13 @@ class Header extends StatelessComponent {
   const Header({super.key});
 
   static const _routes = [
-    (label: 'About', path: '/about'),
-    (label: 'Apps', path: '/apps'),
-    (label: 'Programs', path: '/programs'),
-    (label: 'Events', path: '/events'),
-    (label: 'Team', path: '/team'),
-    (label: 'Store', path: '/store'),
-    (label: 'Contact', path: '/contact'),
+    (label: 'About', path: '/about', external: false),
+    (label: 'Apps', path: '/apps', external: false),
+    (label: 'Programs', path: '/programs', external: false),
+    (label: 'Events', path: '/events', external: false),
+    (label: 'Team', path: '/team', external: false),
+    (label: 'Store', path: 'https://store.nammaflutter.com', external: true),
+    (label: 'Contact', path: '/contact', external: false),
   ];
 
   @override
@@ -41,7 +41,8 @@ class Header extends StatelessComponent {
           for (final route in _routes)
             a(
               href: route.path,
-              classes: active == route.path ? 'nav-link nav-link-active' : 'nav-link',
+              classes: !route.external && active == route.path ? 'nav-link nav-link-active' : 'nav-link',
+              attributes: route.external ? const {'target': '_blank', 'rel': 'noopener noreferrer'} : null,
               [.text(route.label)],
             ),
         ]),

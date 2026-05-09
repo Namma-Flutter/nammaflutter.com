@@ -3,7 +3,7 @@ import 'package:jaspr/jaspr.dart';
 
 import '../constants/theme.dart';
 
-const _storeUrl = 'https://3k.smr.lat/';
+const _storeUrl = ' store.nammaflutter.com ';
 
 @client
 class Store extends StatelessComponent {

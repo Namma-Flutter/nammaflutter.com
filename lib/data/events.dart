@@ -20,9 +20,21 @@ class EventItem {
 
 const events = <EventItem>[
   EventItem(
+    title: '2nd Year Cotton Anniversary',
+    date: '9 May 2026',
+    venue: 'Comcast',
+    type: EventType.past,
+  ),
+  EventItem(
+    title: 'FOSS United Coimbatore X Namma Flutter Meetup',
+    date: '28 Mar 2026',
+    venue: 'iamneo.ai, Coimbatore',
+    type: EventType.past,
+  ),
+  EventItem(
     title: 'Oru Pudi ?',
     date: '31 Jan 2026',
-    venue: 'No.10, Second Floor, 45 Feet Rd, near HDFC Bank, Venkateshwara Nagar, Saram, Puducherry',
+    venue: 'Ocean Academy, Puducherry',
     type: EventType.past,
   ),
   EventItem(
@@ -34,13 +46,13 @@ const events = <EventItem>[
   EventItem(
     title: 'Indie App Development with Flutter',
     date: '20 Sept 2025',
-    venue: 'Karapakkam, Chennai',
+    venue: 'Sciflare Technologies',
     type: EventType.past,
   ),
   EventItem(
-    title: 'Namma Madurai Namma Flutter',
+    title: 'FOSS X Namma Flutter Madurai Meetup',
     date: '23 Aug 2025',
-    venue: 'Madurai, Tamil Nadu',
+    venue: 'Dot Com Infoway',
     type: EventType.past,
   ),
   EventItem(
@@ -56,19 +68,19 @@ const events = <EventItem>[
     type: EventType.past,
   ),
   EventItem(
-    title: '1st year Anniversary powered by Zoho Apptics',
+    title: '1st year Paper Anniversary powered by Zoho Apptics',
     date: '26 Apr 2025',
     venue: 'Entrans Technologies Private Limited',
     type: EventType.past,
   ),
   EventItem(
-    title: 'NAMMAFLUTTER ANNUAL BEGINNER FLUTTER WORKSHOP',
+    title: 'Namma Flutter Annual Beginner Flutter Workshop',
     date: '15 Feb 2025',
     venue: 'Chennai',
     type: EventType.past,
   ),
   EventItem(
-    title: 'MINI HACKATHON',
+    title: 'Mini Hackathon',
     date: '21 Dec 2024',
     venue: 'Thiran Technologies Private Limited',
     type: EventType.past,

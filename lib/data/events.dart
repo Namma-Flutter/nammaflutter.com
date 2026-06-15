@@ -20,6 +20,12 @@ class EventItem {
 
 const events = <EventItem>[
   EventItem(
+    title: 'NammaFlutter x Flutter Kozhikode',
+    date: '6 Jun 2026',
+    venue: 'Kozhikode, Kerala',
+    type: EventType.past,
+  ),
+  EventItem(
     title: '2nd Year Cotton Anniversary',
     date: '9 May 2026',
     venue: 'Comcast',

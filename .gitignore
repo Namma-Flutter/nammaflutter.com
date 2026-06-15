@@ -43,3 +43,6 @@ app.*.map.json
 
 # Local dev helpers (Windows)
 kill-ports.ps1
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json

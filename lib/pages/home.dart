@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 import '../components/apps_showcase.dart';
 import '../components/college_ticker.dart';
 import '../components/cta_band.dart';
-import '../components/event_spotlight.dart';
 import '../components/hero.dart';
 import '../components/namma_word.dart';
 import '../components/podcast_strip.dart';
@@ -32,7 +31,6 @@ class Home extends StatelessComponent {
         secondaryExternal: true,
       ),
       const StatsStrip(),
-      const EventSpotlight(),
       const ProgramShowcase(),
       const AppsShowcase(),
       const CollegeTicker(),

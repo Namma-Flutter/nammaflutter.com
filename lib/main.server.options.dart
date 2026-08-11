@@ -10,8 +10,6 @@ import 'package:nammaflutter/components/button.dart' as _button;
 import 'package:nammaflutter/components/card.dart' as _card;
 import 'package:nammaflutter/components/college_ticker.dart' as _college_ticker;
 import 'package:nammaflutter/components/cta_band.dart' as _cta_band;
-import 'package:nammaflutter/components/event_spotlight.dart'
-    as _event_spotlight;
 import 'package:nammaflutter/components/footer.dart' as _footer;
 import 'package:nammaflutter/components/header.dart' as _header;
 import 'package:nammaflutter/components/hero.dart' as _hero;
@@ -74,7 +72,6 @@ ServerOptions get defaultServerOptions => ServerOptions(
     ..._card.NammaCard.styles,
     ..._college_ticker.CollegeTicker.styles,
     ..._cta_band.CtaBand.styles,
-    ..._event_spotlight.EventSpotlight.styles,
     ..._footer.Footer.styles,
     ..._header.Header.styles,
     ..._hero.Hero.styles,

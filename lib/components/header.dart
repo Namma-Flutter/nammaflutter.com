@@ -1,6 +1,8 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+
 import '../constants/theme.dart';
+import '../data/events.dart' as event_data;
 import 'namma_word.dart';
 
 class Header extends StatelessComponent {
@@ -19,8 +21,25 @@ class Header extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final active = context.url;
+    final upcomingEvents = event_data.events.where((event) => event.type == event_data.EventType.upcoming).toList();
+    final upcomingEvent = upcomingEvents.isEmpty ? null : upcomingEvents.first;
 
     return header([
+      if (upcomingEvent != null)
+        a(
+          href: upcomingEvent.link ?? '/events',
+          target: upcomingEvent.link != null ? .blank : .self,
+          classes: 'event-announcement',
+          attributes: {
+            'aria-label': 'Learn more about ${upcomingEvent.title}',
+            if (upcomingEvent.link != null) 'rel': 'noopener noreferrer',
+          },
+          [
+            span(classes: 'event-announcement-title', [.text(upcomingEvent.title)]),
+            span(classes: 'event-announcement-details', [.text('${upcomingEvent.date} · ${upcomingEvent.venue}')]),
+            span(classes: 'event-announcement-cta', [.text('Explore the event  →')]),
+          ],
+        ),
       div(classes: 'header-inner container', [
         a(href: '/', classes: 'header-logo', [
           const NammaWord(),
@@ -60,6 +79,27 @@ class Header extends StatelessComponent {
       backgroundColor: Colors.white,
       raw: {'backdrop-filter': 'blur(8px)'},
     ),
+    css('.event-announcement').styles(
+      display: .flex,
+      width: 100.percent,
+      minHeight: 44.px,
+      padding: .symmetric(vertical: 9.px, horizontal: 24.px),
+      flexDirection: .row,
+      flexWrap: .wrap,
+      justifyContent: .center,
+      alignItems: .center,
+      gap: .all(10.px),
+      color: Colors.white,
+      textAlign: .center,
+      fontSize: 0.88.rem,
+      fontWeight: .w600,
+      lineHeight: 1.4.em,
+      backgroundColor: primaryColor,
+      raw: {'background-image': 'linear-gradient(90deg, #087CF0 0%, #7448F5 100%)'},
+    ),
+    css('.event-announcement-title').styles(fontWeight: .w700),
+    css('.event-announcement-details').styles(opacity: 0.86),
+    css('.event-announcement-cta').styles(fontWeight: .w700),
     css('.header-inner').styles(
       display: .flex,
       height: 64.px,
@@ -110,6 +150,13 @@ class Header extends StatelessComponent {
       backgroundColor: textColor,
     ),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
+      css('.event-announcement').styles(
+        minHeight: 48.px,
+        padding: .symmetric(vertical: 8.px, horizontal: 16.px),
+        gap: .all(5.px),
+        fontSize: 0.8.rem,
+      ),
+      css('.event-announcement-details').styles(display: .none),
       css('.header-inner').styles(
         height: .auto,
         minHeight: 56.px,

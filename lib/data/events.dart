@@ -19,7 +19,16 @@ class EventItem {
 }
 
 const events = <EventItem>[
-   EventItem(
+  EventItem(
+    title: 'Flutter South India 2026',
+    date: '10 Oct 2026',
+    venue: 'Venue TBA, Chennai',
+    type: EventType.upcoming,
+    link: 'https://southindia.nammaflutter.com/',
+    description:
+        'A community-led day for the people who learn, ship, teach, and care about Flutter and Dart. Tickets open 15 August 2026.',
+  ),
+  EventItem(
     title: 'Flutter Flakes Bangalore x NammaFlutter',
     date: '11 Jul 2026',
     venue: 'UST, Bangalore',

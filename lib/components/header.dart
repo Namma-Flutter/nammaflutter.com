@@ -23,16 +23,19 @@ class Header extends StatelessComponent {
     final active = context.url;
     final upcomingEvents = event_data.events.where((event) => event.type == event_data.EventType.upcoming).toList();
     final upcomingEvent = upcomingEvents.isEmpty ? null : upcomingEvents.first;
+    final eventHref = upcomingEvent?.link ?? '/events';
+    final eventUri = Uri.tryParse(eventHref);
+    final isExternalEventLink =
+        eventUri != null && eventUri.isAbsolute && eventUri.scheme == 'https' && eventUri.host.isNotEmpty;
 
     return header([
       if (upcomingEvent != null)
         a(
-          href: upcomingEvent.link ?? '/events',
-          target: upcomingEvent.link != null ? .blank : .self,
+          href: eventHref,
+          target: isExternalEventLink ? .blank : .self,
           classes: 'event-announcement',
           attributes: {
-            'aria-label': 'Learn more about ${upcomingEvent.title}',
-            if (upcomingEvent.link != null) 'rel': 'noopener noreferrer',
+            if (isExternalEventLink) 'rel': 'noopener noreferrer',
           },
           [
             span(classes: 'event-announcement-title', [.text(upcomingEvent.title)]),
@@ -93,6 +96,7 @@ class Header extends StatelessComponent {
       textAlign: .center,
       fontSize: 0.88.rem,
       fontWeight: .w600,
+      textDecoration: TextDecoration(line: .none),
       lineHeight: 1.4.em,
       backgroundColor: primaryColor,
       raw: {'background-image': 'linear-gradient(90deg, #087CF0 0%, #7448F5 100%)'},

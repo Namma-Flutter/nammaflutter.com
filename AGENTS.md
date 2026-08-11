@@ -2,6 +2,11 @@
 
 This file provides guidance to AI Agents when working with code in this repository.
 
+## Repository operations
+
+- Always use the authenticated GitHub account `shiva396` for every GitHub operation in this repository.
+- Before pushing branches or changing pull requests, verify that `shiva396` is the active account in `gh auth status`.
+
 ## Project Overview
 
 **nammaflutter.com** is the marketing website for Namma Flutter — Chennai's largest Flutter developer community. It is a pure Jaspr web app (no Flutter SDK dependency) with server-side rendering and client-side hydration.

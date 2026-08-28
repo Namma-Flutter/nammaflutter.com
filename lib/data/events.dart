@@ -22,7 +22,7 @@ const events = <EventItem>[
   EventItem(
     title: 'Flutter South India 2026',
     date: '10 Oct 2026',
-    venue: 'Venue TBA, Chennai',
+    venue: 'SRM IST Ramapuram, Chennai',
     type: EventType.upcoming,
     link: 'https://southindia.nammaflutter.com/',
     description:
